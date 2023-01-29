@@ -271,6 +271,10 @@ button{
     display: block;
     color: var(--text-gray);
 }
+.about_wrapper .tab-pane .underline:hover{
+    text-decoration: underline;
+}
+
 
 .services_wrapper .card{
     background-color: var(--bg-dark-blue);
