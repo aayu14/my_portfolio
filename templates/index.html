@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio landing page</title>
+
+  <!-- favicon  -->
+  <link rel="icon" type="image/png"
+    href="/static/images/logo/Black White Minimalist Elegant Initial Name Monogram Square Business Card (1).png">
+
+
+  <!-- boostrap cdn link -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+  <!-- custom file link -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/responsive-style.css">
+
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+  <!-- Navbar section -->
+  <header class="header_wrapper">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/static/images/logo/logo2-.png" class="img-fluid" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <i class="fas fa-stream navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+          <ul class="navbar-nav menu-navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item mt-3 mt-lg-0">
+              <a class="main-btn" href="#contact">Hire me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end navbar -->
+  <!-- banner section -->
+  <section id="home" class="banner_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center text-md-start">
+          <h6>WELCOME TO MY WORLD</h6>
+          <h1>I'm Ayush Mishra<br><span>Python Developer.</span><br>from India</h1>
+          <div class="mt-4">
+            <a class="main-btn" href="{{url_for('download_file')}}">Download cv</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end banner -->
+  <!-- about section -->
+  <section id="about" class="about_wrapper">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <img src="/static/images/profile/profile.jpg" class="img-fluid rounded-3" alt="About-us">
+        </div>
+        <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
+          <div class="my-3 mb-lg-0">
+            <span class="subtitle">My About Details</span>
+            <h2>About me</h2>
+            <p>Good code is its own best documentation. As you're about to add a comment, ask yourself, "How can I
+              improve the code so that this comment isn't needed?” Improve the code and then document it to make it even
+              clearer</p>
+          </div>
+          <div class="pt-4">
+            <ul class="nav nav-pills justify-content-center justify-content-lg-between mb-3" id="pills-tab"
+              role="tablist">
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-skill-tab" data-bs-toggle="pill" data-bs-target="#pills-skill"
+                  type="button" role="tab" aria-controls="pills-skill" aria-selected="true">Main Skill</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-education" type="button" role="tab" aria-controls="pills-education"
+                  aria-selected="false">Education</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-achievments-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-achievments" type="button" role="tab" aria-controls="pills-achievments"
+                  aria-selected="false">Achievments</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-certification-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-certification" type="button" role="tab" aria-controls="pills-certification"
+                  aria-selected="false">Certification</button>
+              </li>
+
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+              <!-- SKILL SECTION -->
+
+              <div class="tab-pane fade show active" id="pills-skill" role="tabpanel" aria-labelledby="pills-skill-tab">
+                <div class="single-progress">
+                  <h6>PYTHON</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">70%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>SQL</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">80%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>HTML</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">85%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>MYSQL</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">85%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>Boostrap</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">60%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>CSS</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">50%</span>
+                </div>
+                <div class="single-progress">
+                  <h6>Flask</h6>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                  <span class="label">70%</span>
+                </div>
+              </div>
+
+             <!-- Education section -->
+
+              <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab">
+                <ul class="text-start ps-0">
+                  <li>
+                    <a href="#">
+                      Pursuing BCA from Chandrabhan Sharma college 
+                      <span>Powai (YCMOU).</span>
+                    </a>2020-still appeared
+                  </li>
+                  <li>
+                    <a href="#">
+                      Intermediate from Sardar Vallabhbhai Patel Jr College
+                      <span>-Dahisar(east).</span>
+                    </a> (Maharashtra Board)
+                  </li>
+                  <li>
+                    <a href="#">
+                      SSC from St. Lawrence high school
+                      <span>Kandivali (east). </span>
+                    </a>(Maharashtra Board)
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-pane fade" id="pills-achievments" role="tabpanel" aria-labelledby="pills-achievments-tab">
+                <ul class="text-start ps-0">
+                  
+                  <li>
+                    <a href="#">
+                      Maths olympiads
+                      <span>-2nd ranker in school </span>
+                    </a>2012
+                  </li>
+                  <li>
+                    <a href="#">
+                      All india cricket under-14 championship
+                      <span>-Winner</span>
+                    </a>2014-2015
+                  </li>
+                  
+                  <li>
+                    <a href="https://www.hackerrank.com/dashboard">
+                      Language Proficiency in Python 
+                      <span>-4 star coder </span>
+                    </a>on HACKERRANK
+                  </li>
+                  <li>
+                    <a href="https://www.hackerrank.com/dashboard">
+                      Problem solving 
+                      <span>3 star coder</span>
+                    </a>on HACKERRANK
+                  </li>
+                  
+                  <li>
+                    <a href="https://www.hackerrank.com/dashboard">
+                      Specialized Skills in SQL
+                      <span>4 star coder</span>
+                    </a>on HACKERRANK
+                  </li>
+                  <li>
+                    <a href="#">
+                      College IT Fest Event Managed
+                      <span> AS Coding Head. </span>
+                    </a>2021
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-pane fade" id="pills-certification" role="tabpanel"
+                aria-labelledby="pills-certification-tab">
+
+                <ul class="text-start ps-0">
+                  <li>
+                    <a href="/static/certificate/python and flask framework_certification.pdf">
+                      Python And Flask Framework 
+                      <span>- Udemy</span>
+                    </a>June 8,2022
+                  </li>
+                 
+                  <li>
+                    <a href="/static/certificate/certificate (3).pdf">
+                     Basic Data science in python
+                      <span>- Datacamp</span>
+                    </a>May 31,2022
+                  </li>
+                  <li>
+                    <a href="/static/certificate/certificate.pdf">
+                     Intermediate python
+                      <span>- Datacamp</span>
+                    </a>May 04,2022
+                  </li>
+                  <li>
+                    <a href="/static/certificate/python_basic certificate.pdf">
+                      Basic Python
+                      <span>-Hackerank</span>
+                    </a>Nov 18,2022
+                  </li>
+                  <li>
+                    <a href="/static/certificate/1-7564719c-8686-4d30-9a05-b1d13911b1ce.pdf">
+                      OOPS in python
+                      <span>- Infosys | Springboard</span>
+                    </a>November 21,2022
+                  </li>
+                  <li>
+                    <a href="/static/certificate/sql_basic certificate.pdf">
+                      Basic SQL
+                      <span>- Datacamp</span>
+                    </a>Dec 01,2022
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about -->
+  <!-- services section -->
+  <section id="services" class="services_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center mb-4">
+          <span class="subtitle">What I can do for you</span>
+          <h2>My Awesome sevices</h2>
+          <p>There are Lorem ipsum dolor sit,
+            <br class="d-none d-md-block"> amet consectetur adipisicing elit. Modi explicabo debitis ipsum! Rem, non.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center">
+              <img src="#" alt="service" class="img-fluid mb-4">
+              <h3>Business stategy</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center">
+              <img src="#" alt="service" class="img-fluid mb-4">
+              <h3>Mobile app Development</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center">
+              <img src="#" alt="service" class="img-fluid mb-4">
+              <h3>SEO</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center">
+              <img src="#" alt="service" class="img-fluid mb-4">
+              <h3>Ai/Ml based project</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center">
+              <img src="#" alt="service" class="img-fluid mb-4">
+              <h3>Web based Project</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-md-start text-center">
+              <img src="#" alt="service" class="img-fluid mb-4">
+              <h3>Cloud based solution</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end services -->
+  <!-- Portfolio section -->
+  <section id="portfolio" class="portfolio_wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center mb-4">
+          <span class="subtitle">
+            My complete project
+          </span>
+          <h2>My latest project</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br class="d-none d-md-block">Vel quae, tenetur
+            provident accusantium,tempora.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card p-0">
+            <span
+              style="background-image: url('/static/images/project/fahim-muntashir-v-FOvoL3onk-unsplash.jpg')"></span>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card p-0">
+            <span style="background-image: url('/static/images/project/daniel-korpai-pKRNxEguRgM-unsplash.jpg')"></span>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card p-0">
+            <span style="background-image: url('/static/images/project/daniel-korpai-pKRNxEguRgM-unsplash.jpg')"></span>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card p-0">
+            <span
+              style="background-image: url('/static/images/project/fahim-muntashir-v-FOvoL3onk-unsplash.jpg')"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- end Portfolio -->
+  <!-- contact section -->
+  <section id="contact" class="contact_wrapper">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-6 order-2 order-lg-1 pe-lg-5 text-lg-start text-center">
+          <span class="subtitle">My complete Project</span>
+          <h2>Hire me</h2>
+          <div class="row call_details mb-4">
+            <lable class="col-sm-3 col-lg-4">Call us directly:</lable>
+            <div class="col-sm-9 col-lg-8 mb-3 mb-lg-2 text-md-start">
+              <a href="javascript:void(0)">+91 6204261652</a>
+            </div>
+            <label class="col-sm-3 col-lg-4 ">Contact Email:</label>
+            <div class="col-sm-9 col-lg-8 mb-3 mb-lg-2 text-md-start">
+              <a href="mailto:am94947651@gmail.com">am94947651@gmail.com</a>
+            </div>
+          </div>
+          <form  action="{{url_for('send_message')}}" method="post">
+            <div class="mb-4">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your name..." autocomplete="off">
+            </div>
+            <div class="mb-4">
+              <input type="number" class="form-control"  id="phone_number" name="phone_number" placeholder="Your Phone number..." autocomplete="off">
+            </div>
+            <div class="mb-4">
+              <input type="email" class="form-control"  id="email"  name="email" placeholder="Your email..." autocomplete="off">
+            </div>
+            <div class="mb-4">
+              <textarea class="form-control" id="message"  name="message" cols="40" rows="4" placeholder="Your message..."autocomplete="off"></textarea>
+            </div>
+            <button class="main-btn" type="submit">submit</button>
+          </form>
+        </div>
+        <div class="col-lg-6 order-1 mb-4 order-lg-1 mb-lg-0">
+          <img src="/static/images/profile/profile.jpg" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact -->
+  <!-- footer section  -->
+<section id="contact" class="footer_wrapper mt-3 mt-md-0">
+<div class="container">
+  <div class="row align-item-center">
+    <div class="col-lg-4 col-md-6 text-center text-md-start">
+    <div class="footer-logo mb-3 mb-md-0">
+     <img src="/static/images/logo/logo2-.png" class="img-fluid" alt="logo">
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <ul class="list-unstyled d-flex justify-content-center justify-content-md-end justify-content-lg-center social-icon mb-3 mb-md-0">
+        <li><a href="https://instagram.com/_fragile_soul__?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/ayush-mishra-2b1226235/"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.hackerrank.com/am94947651"><i class="fab fa-hackerrank"></i></a></li>
+        <li><a href="https://github.com/aayu14"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-lg-4 col-md-12">
+      <div class="copyright-text text-lg-start text-center mb-3 mb-lg-0">
+        <p class="mb-0">
+          copyright©2023<a href="#">Codeed by Aayu</a>.All right reserved. 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+  <!-- end footer -->
+  <!-- boostrap js link -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <!-- custom js  -->
+
+  <link rel="stylesheet" href="/static/js/main.js">
+</body>
+</body>
+
+</html>
