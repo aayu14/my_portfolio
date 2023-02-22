@@ -49,21 +49,3 @@ def download_file():
 if __name__=="__main__":
     app.run(debug=False,host='0.0.0.0')
 
-
- 
-
-
-
-
-    # {% with messages = get_flashed_messages(with_categories=true) %}
-    #                     {% if messages %}
-    #                         {% for category, message in messages %}
-    #                             {% set message_class = 'is-success' %}
-
-    #                             {% if category == 'error' %}
-    #                                 {% set message_class = 'is-danger' %}
-    #                             {% endif %}
-    #                             <div class="notification {{ message_class }}">{{ message }}</div>
-    #                         {% endfor %}
-    #                     {% endif %}
-    #                     {% endwith %}
